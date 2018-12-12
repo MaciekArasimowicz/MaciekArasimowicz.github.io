@@ -4,6 +4,10 @@ let arrayOfNumbersOfPeople = [];
 let poppedNo;
 let father;
 let trToInsertTo;
+const audio = document.querySelector(".audio");
+const wishes = document.querySelector(".wishes");
+
+
 
 let people = ["Helenka", "Elza", "Tadziu", "Ania"];
 let numbersOfPeople = people.map((e, i) => arrayOfNumbersOfPeople.push(i))
@@ -27,6 +31,8 @@ function renderTable(peopleToRender) {
 }
 
 function getPerson() {
+
+    audio.currentTime ? null : audio.play();
 
     if (people.length <= 0) return;
     number = Math.floor(Math.random() * people.length);
@@ -55,6 +61,9 @@ function getPerson() {
     })
     people = newPeople;
     // renderPeople(people);
+    if (people.length <= 0) {
+        wishes.classList.add('visible')
+    }
 }
 
 // renderPeople(people);

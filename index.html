@@ -99,6 +99,35 @@
         color: #161D41;
     }
 
+    .wishes {
+        opacity: 0;
+        font-size: 20px;
+        width: 40vw;
+        height: 30vh;
+        position: absolute;
+        left: 0;
+        top: 20vh;
+        z-index: 5;
+        background-image: url("cloud.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 3s ease-in-out;
+    }
+
+    .wishes.visible {
+        opacity: 1;
+    }
+
+    .wishes>span {
+        display: block;
+        width: 25vw;
+        text-align: center;
+        color: #295B84;
+    }
+
     .button {
         z-index: 10;
         display: inline-block;
@@ -214,11 +243,14 @@
 </style>
 
 <body>
-    <audio src="So This Is Christmas.mp3" autoplay></audio>
+    <audio class="audio" src="So This Is Christmas.mp3"></audio>
 
     <div class="bg">
         <div class="presents"></div>
         <!-- <img src="./presents.png" alt="" class="presents" > -->
+        <div class="wishes">
+            <span>Przepięknych Świąt spędzonych z Jubilatem życzą Magda i Maciek</span>
+        </div>
         <canvas id="canvas"></canvas>
         <div class='container'>
 
