@@ -41,7 +41,8 @@ function getPerson() {
 
     setTimeout(() => {
         td.classList.add("visible")
-    }, 1000)
+    }, 20)
+
     trToInsertTo.appendChild(td);
 
 
